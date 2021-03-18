@@ -212,6 +212,7 @@ ping 192.168.200.3
 ---
 
 **LIVRABLE : capture d'écran de votre tentative de ping.**  
+![image](https://user-images.githubusercontent.com/61737056/111638703-dfb9c680-87fa-11eb-8eb1-ce58b061318b.png)
 
 ---
 
