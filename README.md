@@ -239,7 +239,7 @@ ping 192.168.200.3
 
 **LIVRABLE : capture d'écran de votre tentative de ping.**  
 
-![image-20210318160513940](image-20210318160513940.png)
+![image-20210318160513940](figures/image-20210318160513940.png)
 
 ---
 
@@ -280,7 +280,7 @@ ping 192.168.100.3
 
 **LIVRABLES : captures d'écran des routes des deux machines et de votre nouvelle tentative de ping.**
 
-![image-20210318160811739](image-20210318160811739.png)
+![image-20210318160811739](figures/image-20210318160811739.png)
 
 ---
 
@@ -300,11 +300,11 @@ Si votre ping passe mais que la réponse contient un _Redirect Host_, ceci indiq
 
 Depuis le serveur (émet une redirection):
 
-![image-20210318160931852](image-20210318160931852.png)
+![image-20210318160931852](figures/image-20210318160931852.png)
 
 Depuis le client:
 
-![image-20210318161009901](image-20210318161009901.png)
+![image-20210318161009901](figures/image-20210318161009901.png)
 
 ---
 
@@ -426,13 +426,13 @@ traceroute 8.8.8.8
 
 ping:
 
-![image-20210321174130670](image-20210321174130670.png)
+![image-20210321174130670](figures/image-20210321174130670.png)
 
 traceroute:
 
 Pour que la commande traceroute fonctionne, il faut mettre la FORWARD chain et l'OUTPUT chain en ACCEPT.
 
-<img src="image-20210321180937053.png" alt="image-20210321180937053" style="zoom:150%;" />
+<img src="figures/image-20210321180937053.png" alt="image-20210321180937053" style="zoom:150%;" />
 
 
 
@@ -477,7 +477,7 @@ ping www.google.com
 
 **LIVRABLE : capture d'écran de votre ping.**
 
-![image-20210321182019767](image-20210321182019767.png)
+![image-20210321182019767](figures/image-20210321182019767.png)
 
 ---
 
@@ -511,7 +511,7 @@ iptables -A FORWARD -m conntrack --ctstate INVALID -j DROP
 
 **LIVRABLE : capture d'écran de votre ping.**
 
-![image-20210321183920059](image-20210321183920059.png)
+![image-20210321183920059](figures/image-20210321183920059.png)
 
 ---
 
@@ -580,11 +580,11 @@ iptables -A FORWARD -p tcp --dport 80 -i eth0 -d 192.168.200.3 -j ACCEPT
 
 Pour les conditions 3 et 4:
 
-![image-20210321185712064](image-20210321185712064.png)
+![image-20210321185712064](figures/image-20210321185712064.png)
 
 Pour la condition 5:
 
-![image-20210321191352985](image-20210321191352985.png)
+![image-20210321191352985](figures/image-20210321191352985.png)
 
 
 
@@ -625,13 +625,13 @@ ssh root@192.168.200.3
 
 Lorsqu'on se connecte au serveur de la DMZ:
 
-![image-20210321202251613](image-20210321202251613.png)
+![image-20210321202251613](figures/image-20210321202251613.png)
 
-![image-20210321202311857](image-20210321202311857.png)
+![image-20210321202311857](figures/image-20210321202311857.png)
 
 Lorsqu'on se connecte au firewall:
 
-![image-20210321202703254](image-20210321202703254.png)
+![image-20210321202703254](figures/image-20210321202703254.png)
 
 
 
@@ -677,6 +677,6 @@ A présent, vous devriez avoir le matériel nécessaire afin de reproduire la ta
 
 **LIVRABLE : capture d'écran avec toutes vos règles.**
 
-![image-20210321204931374](image-20210321204931374.png)
+![image-20210321204931374](figures/image-20210321204931374.png)
 
 ---
