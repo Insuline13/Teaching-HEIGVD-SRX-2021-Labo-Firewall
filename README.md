@@ -391,8 +391,8 @@ iptables -P FORWARD DROP
 iptables -A FORWARD -p icmp --icmp-type 8 -s 192.168.100.0/24 -d 192.168.200.0/24 -j ACCEPT
 iptables -A FORWARD -p icmp --icmp-type 0 -s 192.168.200.0/24 -d 192.168.100.0/24 -j ACCEPT
 
-iptables -A FORWARD -p icmp --icmp-type 8 -s 192.168.100.0/24 -o eth0 -j ACCEPT
-iptables -A FORWARD -p icmp --icmp-type 0 -i eth0 -d 192.168.100.0/24 -j ACCEPT
+iptables -A FORWARD -p icmp --icmp-type 8 -s 192.168.100.0/24 -j ACCEPT
+iptables -A FORWARD -p icmp --icmp-type 0 -d 192.168.100.0/24 -j ACCEPT
 
 iptables -A FORWARD -p icmp --icmp-type 8 -s 192.168.200.0/24 -d 192.168.100.0/24 -j ACCEPT
 iptables -A FORWARD -p icmp --icmp-type 0 -s 192.168.100.0/24 -d 192.168.200.0/24 -j ACCEPT
@@ -490,9 +490,9 @@ Commandes iptables :
 ```bash
 LIVRABLE : Commandes iptables
 
-iptables -A FORWARD -p tcp --dport 53 -s 192.168.100.0/24 -o eth0 -j ACCEPT
-iptables -A FORWARD -p udp --dport 53 -s 192.168.100.0/24 -o eth0 -j ACCEPT
-iptables -A FORWARD -p udp --sport 53 -i eth0 -d 192.168.100.0/24 -j ACCEPT
+iptables -A FORWARD -p tcp --dport 53 -s 192.168.100.0/24 -j ACCEPT
+iptables -A FORWARD -p udp --dport 53 -s 192.168.100.0/24 -j ACCEPT
+iptables -A FORWARD -p udp --sport 53 -d 192.168.100.0/24 -j ACCEPT
 
 iptables -A FORWARD -m conntrack --ctstate RELATED,ESTABLISHED -j ACCEPT
 iptables -A FORWARD -m conntrack --ctstate INVALID -j DROP
@@ -547,9 +547,9 @@ Commandes iptables :
 ```bash
 LIVRABLE : Commandes iptables
 
-iptables -A FORWARD -p tcp --dport 80 -s 192.168.100.0/24 -o eth0 -j ACCEPT
-iptables -A FORWARD -p tcp --dport 8080 -s 192.168.100.0/24 -o eth0 -j ACCEPT
-iptables -A FORWARD -p tcp --dport 443 -s 192.168.100.0/24 -o eth0 -j ACCEPT
+iptables -A FORWARD -p tcp --dport 80 -s 192.168.100.0/24 -j ACCEPT
+iptables -A FORWARD -p tcp --dport 8080 -s 192.168.100.0/24 -j ACCEPT
+iptables -A FORWARD -p tcp --dport 443 -s 192.168.100.0/24 -j ACCEPT
 
 ```
 
@@ -565,7 +565,7 @@ Commandes iptables :
 LIVRABLE : Commandes iptables
 
 iptables -A FORWARD -p tcp --dport 80 -s 192.168.100.0/24 -d 192.168.200.3 -j ACCEPT
-iptables -A FORWARD -p tcp --dport 80 -i eth0 -d 192.168.200.3 -j ACCEPT
+iptables -A FORWARD -p tcp --dport 80 -d 192.168.200.3 -j ACCEPT
 ```
 ---
 
@@ -677,6 +677,6 @@ A présent, vous devriez avoir le matériel nécessaire afin de reproduire la ta
 
 **LIVRABLE : capture d'écran avec toutes vos règles.**
 
-![image-20210321204931374](figures/image-20210321204931374.png)
+![image-20210323170939360](figures/image-20210323170939360.png)
 
 ---
